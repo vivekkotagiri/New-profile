@@ -41,11 +41,11 @@ window.addEventListener('scroll', animateSkills);
 
 // Download resume button functionality
 document.getElementById('downloadResumeBtn').addEventListener('click', () => {
-  // If your resume PDF is named 'Resume_Vivek(1).pdf' and placed in the same folder,
+  // If your resume PDF is named 'Vivek Resume.pdf' and placed in the same folder,
   // this will trigger the download.
   const link = document.createElement('a');
-  link.href = 'Resume_Vivek(1).pdf';
-  link.download = 'Resume_Vivek(1).pdf';
+  link.href = 'Vivek Resume.pdf';
+  link.download = 'Vivek Resume.pdf';
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
