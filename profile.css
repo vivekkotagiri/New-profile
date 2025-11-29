@@ -17,13 +17,86 @@ body {
     max-width: 1100px;
     margin: 0 auto;
   }
+
+
+
+/* Glassmorphic Navbar with Original Gradient Colors */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    padding: 15px 0;
+    backdrop-filter: blur(12px); /* glass blur */
+    background: rgba(2, 0, 36, 0.7); /* semi-transparent for glass effect */
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    background: linear-gradient(
+        125deg,
+        rgba(2, 0, 36, 0.7) 0%,
+        rgba(9, 9, 121, 0.7) 35%,
+        rgba(1, 193, 232, 0.7) 100%
+    );
+}
+
+/* Container */
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: white;
+}
+
+/* Nav links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color:#ff3e1e;
+}
+
+/* Dark mode toggle button */
+#toggle-dark {
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#toggle-dark:hover {
+    transform: rotate(20deg);
+}
+
+
   
   /* Navbar */
-  .navbar {
+  /* .navbar {
     background: #050600;
     color:white;
     background: #020024;
-background: linear-gradient(125deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+background: linear-gradient(125deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgb(1, 193, 232) 100%);
     padding: 15px 0;
     position: sticky;
     top: 0;
@@ -72,7 +145,7 @@ background: linear-gradient(125deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%
   
   #toggle-dark:hover {
     transform: rotate(20deg);
-  }
+  } */
   
   /* Hero */
   .hero {
@@ -164,9 +237,12 @@ background: linear-gradient(125deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%
   .hero-img {
     flex: 1 1 280px;
     text-align: center;
+    height: 400px;
+    width: 600px;
   }
   
   .hero-img img {
+   
     max-width: 280px;
     border-radius: 50%;
     border: 2px solid whitesmoke;
@@ -188,7 +264,7 @@ background: linear-gradient(125deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%
     
   }
   /* Skills */
-  .skill {
+  /* .skill {
     margin-bottom: 20px;
   }
   
@@ -210,6 +286,10 @@ background: linear-gradient(125deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%
     transition: width 1.5s ease-in-out;
   }
   
+  .skill-level.java{
+    background:#ffcc00 ;
+    width: 0;
+  }
   .skill-level.html {
     background: #e44d26;
     width: 0;
@@ -232,7 +312,7 @@ background: linear-gradient(125deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%
   .skill-level.mysql{
     background: #343535;
     width: 0;
-  }
+  } */
   
   /* Projects */
   .projects-grid {
@@ -256,7 +336,7 @@ background: linear-gradient(125deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%
   .project-card h3 {
     margin-top: 0;
     margin-bottom: 15px;
-    color: #1ed239;
+    color: #3b82f6;
   }
   
   .project-card p {
@@ -282,6 +362,120 @@ background: linear-gradient(125deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%
     padding: 20px 0;
     font-size: 0.9rem;
   }
+
+
+ /* GLASS WRAPPER */
+    .glass{
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+      border:1px solid var(--glass-border);
+      border-radius:var(--glass-radius);
+      padding:18px;
+      backdrop-filter: blur(var(--glass-blur)) saturate(1.05);
+      box-shadow: 0 8px 30px rgba(2,6,23,0.45);
+    }
+
+    /* SKILLS GRID (Glassmorphism Cards) */
+    .skills-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      gap:20px;
+      margin-top:18px;
+    }
+
+    .skill-card{
+      position:relative;
+      overflow:hidden;
+      padding:22px;
+      border-radius:14px;
+      transition: transform .35s cubic-bezier(.2,.9,.2,1), box-shadow .35s;
+      background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border:1px solid rgba(255,255,255,0.06);
+      backdrop-filter: blur(6px) saturate(1.1);
+    }
+    .skill-card:hover{ transform: translateY(-8px); box-shadow: 0 26px 60px rgba(2,6,23,0.6) }
+
+    .skill-top{display:flex;align-items:center;gap:12px}
+    .skill-icon{
+      width:56px;height:56px;border-radius:12px;flex:0 0 56px;padding:8px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));
+      display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.04)
+    }
+    .skill-icon img{width:36px;height:36px;object-fit:contain;display:block}
+
+    .skill-name{font-weight:700;font-size:1.02rem}
+    .skill-sub{font-size:0.85rem;color:var(--muted);margin-top:6px}
+
+    /* progress wrapper */
+    .progress-wrap{margin-top:14px}
+    .progress-bar{
+      width:100%;
+      height:12px;
+      background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:999px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,0.03);
+    }
+    .progress-fill{
+      height:100%;
+      width:0;
+      display:flex;
+      align-items:center;
+      justify-content:flex-end;
+      padding-right:8px;
+      color: rgba(0,0,0,0.6);
+      font-weight:700;
+      border-radius:999px;
+      transition: width 1.9s cubic-bezier(.2,.9,.2,1);
+    }
+
+    /* small percentage bubble */
+    .percent-bubble{
+      font-weight:700;
+      font-size:0.86rem;
+      color:var(--text);
+      background: rgba(255,255,255,0.06);
+      padding:6px 10px;
+      border-radius:999px;
+      margin-left:8px;
+      transform:translateY(-8px);
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow: 0 6px 20px rgba(2,6,23,0.4);
+    }
+
+    /* color themes for fills */
+    .fill-java{ background: linear-gradient(90deg,#f6c84a,#ffb03b); width:0 }
+    .fill-html{ background: linear-gradient(90deg,#ff6b4a,#ff3e1e); width:0 }
+    .fill-css{ background: linear-gradient(90deg,#3b82f6,#1d4ed8); width:0 }
+    .fill-js{ background: linear-gradient(90deg,#f7df1e,#f0c419); width:0; color:#111}
+    .fill-python{ background: linear-gradient(90deg,#2b77b5,#306998); width:0 }
+    .fill-mysql{ background: linear-gradient(90deg,#0ea5a4,#065f46); width:0 }
+
+    /* animated shimmering overlay */
+    .skill-card::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      background:linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.012) 40%, rgba(255,255,255,0.02) 50%, transparent 70%);
+      transform: translateX(-120%);
+      transition: transform .8s ease;
+    }
+    .skill-card:hover::after{ transform: translateX(20%); }
+
+    /* small caption under each card */
+    .skill-caption{font-size:0.85rem;color:var(--muted);margin-top:12px}
+
+
+
+
+
+
+
+
+
+
+
   
   /* Responsive */
   @media (max-width: 768px) {

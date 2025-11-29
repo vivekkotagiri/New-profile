@@ -6,7 +6,9 @@
   <script defer src="profile.js"></script>
 </head>
 <body>
-  <nav class="navbar">
+
+
+<nav class="navbar glass-navbar">
     <div class="container">
       <h1 class="logo">Vivek's Portfolio</h1>
       <ul class="nav-links">
@@ -20,7 +22,27 @@
         <li><button id="toggle-dark" aria-label="Toggle Dark Mode">🌙</button></li>
       </ul>
     </div>
-  </nav>
+</nav>
+
+
+
+
+
+  <!-- <nav class="navbar">
+    <div class="container">
+      <h1 class="logo">Vivek's Portfolio</h1>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certificationcourses">Certification</a></li>
+        <li><a href="#achievementsandawards">Achievements</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="toggle-dark" aria-label="Toggle Dark Mode">🌙</button></li>
+      </ul>
+    </div>
+  </nav> -->
   <header class="hero container" id="home">
     <div class="hero-text">
       <h2>Hello, I'm <span id="typed"></span></h2>
@@ -46,15 +68,141 @@
     <section id="education" class="container">
       <h2>Education</h2>
       <h4>Malla Reddy College of Engineering(MRCE) ---2021-2025</h4>
-      <p>Pursuing B.Tech in Artificial Intelligence & Data Science with an percentage of 71% </p>
+      <p>B.Tech graduate in Artificial Intelligence & Data Science with a CGPA of 6.9 </p>
       <h4>Sri Chaitanya Junior College ---2019-2021</h4>
-      <p>Successfully completed secondary education with a percentage of 76.0% </p>
+      <p>Successfully completed secondary education with a percentage of 74.0% </p>
       <h4>Kakatiya High School ---2019</h4>
-      <p>Successfully completed primary education with a percentage of 87% </p>
+      <p>Successfully completed primary education with a CGPA of 8.7 </p>
   </section>
 
+
+ <!-- SKILLS (Glass Cards) -->
   <section id="skills" class="container">
     <h2>Skills</h2>
+
+    <div class="skills-grid">
+      <!-- Java -->
+      <div class="skill-card glass" data-percent="90">
+        <div class="skill-top">
+          <div class="skill-icon"><img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" alt="Java"></div>
+          <div>
+            <div class="skill-name">Java</div>
+            <div class="skill-sub">Object Oriented Programming</div>
+          </div>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-bar">
+            <div class="progress-fill fill-java" data-target="90"></div>
+          </div>
+        </div>
+        <div class="skill-caption">Backend logic, OOP concepts, JDBC basics</div>
+      </div>
+
+      <!-- HTML -->
+      <div class="skill-card glass" data-percent="95">
+        <div class="skill-top">
+          <div class="skill-icon"><img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML"></div>
+          <div>
+            <div class="skill-name">HTML</div>
+            <div class="skill-sub">Semantic Markup & Accessibility</div>
+          </div>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-bar">
+            <div class="progress-fill fill-html" data-target="95"></div>
+          </div>
+        </div>
+        <div class="skill-caption">Responsive layouts, forms & SEO friendly markup</div>
+      </div>
+
+      <!-- CSS -->
+      <div class="skill-card glass" data-percent="85">
+        <div class="skill-top">
+          <div class="skill-icon"><img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS"></div>
+          <div>
+            <div class="skill-name">CSS</div>
+            <div class="skill-sub">Styling & Layouts</div>
+          </div>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-bar">
+            <div class="progress-fill fill-css" data-target="85"></div>
+          </div>
+        </div>
+        <div class="skill-caption">Flexbox, Grid, animations and responsive design</div>
+      </div>
+
+      <!-- JavaScript -->
+      <div class="skill-card glass" data-percent="75">
+        <div class="skill-top">
+          <div class="skill-icon"><img src="https://cdn-icons-png.flaticon.com/512/541/541509.png" alt="JS"></div>
+          <div>
+            <div class="skill-name">JavaScript</div>
+            <div class="skill-sub">Frontend Interactivity</div>
+          </div>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-bar">
+            <div class="progress-fill fill-js" data-target="75"></div>
+          </div>
+        </div>
+        <div class="skill-caption">DOM, events, basics of ES6</div>
+      </div>
+
+      <!-- Python -->
+      <div class="skill-card glass" data-percent="60">
+        <div class="skill-top">
+          <div class="skill-icon"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python"></div>
+          <div>
+            <div class="skill-name">Python</div>
+            <div class="skill-sub">Scripting & ML basics</div>
+          </div>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-bar">
+            <div class="progress-fill fill-python" data-target="60"></div>
+          </div>
+        </div>
+        <div class="skill-caption">Kaggle practice, data handling</div>
+      </div>
+
+      <!-- MySQL -->
+      <div class="skill-card glass" data-percent="75">
+        <div class="skill-top">
+          <div class="skill-icon"><img src="https://cdn-icons-png.flaticon.com/512/919/919836.png" alt="MySQL"></div>
+          <div>
+            <div class="skill-name">MySQL</div>
+            <div class="skill-sub">Database Fundamentals</div>
+          </div>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-bar">
+            <div class="progress-fill fill-mysql" data-target="75"></div>
+          </div>
+        </div>
+        <div class="skill-caption">Queries, joins, basic DB design</div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+  <!-- <section id="skills" class="container">
+    <h2>Skills</h2>
+    <div class="skill">
+      <h3>Java</h3>
+      <div class="skill-bar">
+        <div class="skill-level java"></div>
+      </div>
+    </div>
     <div class="skill">
       <h3>HTML</h3>
       <div class="skill-bar">
@@ -85,18 +233,27 @@
         <div class="skill-level mysql"></div>
       </div>
     </div>
-  </section>
+  </section> -->
+
+
+
+  
   <section id="projects" class="container">
     <h2>Projects</h2>
     <div class="projects-grid">
       <div class="project-card">
+        <h3>LeafCart🛒.in  A Complete E-Commerce Frontend Project.</h3>
+        <p>LeafCart🛒.in a simple and creative online grocery store website built using HTML, CSS, 
+          and JavaScript.</p>
+      </div>
+      <div class="project-card">
         <h3>Automated Road Damage Detection Using UAV Images and Deep Learning 
-            Techniques</h3>
+            Techniques.</h3>
         <p>Using computer vision to identify and classify road damages automatically.</p>
       </div>
       <div class="project-card">
         <h3>The Influence of Artificial Intelligence on E-Governance and Cybersecurity in SmartCities: A 
-            Stakeholder’s Perspective </h3>
+            Stakeholder’s Perspective.</h3>
         <p>Integrating AI and cybersecurity measures in e-governance for smarter cities.</p>
       </div>
       <div class="project-card">
@@ -134,7 +291,7 @@
     <h2>Contact Me</h2>
     <p>Ph no: 9182002902</p>
     <p>Email: <a href="mailto:kotagiri.vivek321@gamil.com">kotagiri.vivek321@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/vivek-kotagiri-b4b7b6330/" target="_blank">linkedin.com/in/vivek-kotagiri-b4b7b6330</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/vivek-kotagiri-b4b7b6330/" target="_blank">linkedin.com/in/vivek-kotagiri</a></p>
   </section>
 
   <footer>
